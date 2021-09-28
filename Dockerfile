@@ -12,4 +12,4 @@ COPY --from=build /dist /usr/share/nginx/html
 
 RUN echo OK > /usr/share/nginx/html/ping
 
-RUN find . -type f -name "*.js" -exec sed -i "s/http\:\/\/localhost\:8000/${PROD_URL}/g" {} +
+RUN find . -type f -name "*.js" -exec sed -i "s~http://localhost:8000~${PROD_URL}~g" {} +
