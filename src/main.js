@@ -1,4 +1,4 @@
-import {createApp, Vue} from 'vue'
+import {createApp} from 'vue'
 
 import App from './App.vue'
 import router from './router'
@@ -11,7 +11,7 @@ const config = () => {
         CONFIG_PRODUCTION_TIP: false
     }
 }
-// app.config.globalProperties.hostname = config.CONFIG_PRODUCTION_TIP ? 'https://mypaste.evgeniyshubin.dev' : 'http://localhost:8000'
+// app.config.globalProperties.hostname = config.CONFIG_PRODUCTION_TIP ? 'https://mypaste' : 'http://localhost:8000'
 console.log(app.config)
 app.config.globalProperties.$hostname = 'http://localhost:8000'
 console.log(app.config)
