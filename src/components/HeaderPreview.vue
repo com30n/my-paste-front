@@ -20,8 +20,7 @@ export default {
   name: "HeaderPreview",
   data() {
     return {
-      url: combineURLs(this.$hostname + this.$route.path)
-
+      url: combineURLs(location.host + this.$route.path)
     }
   },
   methods: {

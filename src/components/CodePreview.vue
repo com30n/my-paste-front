@@ -21,7 +21,6 @@ export default {
 }
 
 .text {
-  width: 100%;
   grid-column: 1 / -1;
   grid-row: 2 / 4;
   background: white;

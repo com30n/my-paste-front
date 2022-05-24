@@ -10,6 +10,12 @@ const routes = [
     component: Paste
   },
   {
+    path: '/:id',
+    name: 'PastePreview',
+    component: PastePreview
+  },
+
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
