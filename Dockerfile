@@ -1,4 +1,4 @@
-FROM node as build
+FROM node:17.9.0 as build
 
 COPY './package.json' './yarn.lock' './'
 RUN yarn install --pure-lockfile
