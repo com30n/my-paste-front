@@ -11,7 +11,7 @@ const config = () => {
         CONFIG_PRODUCTION_TIP: false
     }
 }
-// app.config.globalProperties.hostname = config.CONFIG_PRODUCTION_TIP ? 'https://mypaste' : 'http://localhost:8000'
+
 console.log(app.config)
-app.config.globalProperties.$hostname = 'http://localhost:8000'
-console.log(app.config)
+console.log(process.env.VUE_APP_HOSTNAME)
+app.config.globalProperties.$hostname = process.env.VUE_APP_HOSTNAME
