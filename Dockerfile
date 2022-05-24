@@ -9,7 +9,7 @@ RUN yarn build --production
 FROM nginx as static
 
 COPY --from=build /dist /usr/share/nginx/html
-
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 RUN echo OK > /usr/share/nginx/html/ping
 ENV a=https://paste.evgeniyshubin.dev/
-RUN find . -type f -name "*.js" -exec sed -i "s|http://localhost:8000|${PROD_URL}|g" {} +
+#RUN find . -type f -name "*.js" -exec sed -i "s|http://localhost:8000|${PROD_URL}|g" {} +
