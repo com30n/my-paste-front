@@ -18,6 +18,9 @@ export default {
   margin: 30px;
   height: 90px;
   background: #fcfcfc;
+  grid-column: 1 / -1;
+  grid-row: 1 / -2;
+  display: grid;
 }
 
 .text {
