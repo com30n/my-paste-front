@@ -20,6 +20,7 @@ app:
   image:
     repository: REPO_NAME
     tag: REPO_TAG
+    pullPolicy: Always
 
   ## Args for entry point
   args: []
